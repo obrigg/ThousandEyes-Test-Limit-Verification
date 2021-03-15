@@ -12,20 +12,28 @@ This simple script will run a set of rules agaist the tests configured in your T
 ## How to run the script
 1. Create and activate a virtual environment
 
-    `python3 -m venv venv`
-    `source venv/bin/activate`
+    ```
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
 2. Install required packages
 
-    `pip install -r requirements.txt`
+    ```
+    pip install -r requirements.txt
+    ```
 3. Set the environment variables
 
-    `export TE_USER=<Your ThousandEyes username>`
-    `export TE_TOKEN=<Your ThousandEyes token>`
+    ```
+    export TE_USER=<Your ThousandEyes username>
+    export TE_TOKEN=<Your ThousandEyes token>
+    ```
 .
     > The ThousandEyes basic authentication token can be found in the ThousandEyes dashboard > Account Settings > Users and roles > Profile
     
 4. Run the script
-    `python run.py`
+    ```
+    python run.py
+    ```
 ----
 ### Licensing info
 Copyright (c) 2020 Cisco and/or its affiliates.
