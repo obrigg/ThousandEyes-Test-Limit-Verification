@@ -27,10 +27,11 @@ This simple script will run a set of rules agaist the tests configured in your T
     export TE_USER=<Your ThousandEyes username>
     export TE_TOKEN=<Your ThousandEyes token>
     ```
-.
+    
     > The ThousandEyes basic authentication token can be found in the ThousandEyes dashboard > Account Settings > Users and roles > Profile
     
 4. Run the script
+
     ```
     python run.py
     ```
