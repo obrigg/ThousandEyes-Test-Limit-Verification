@@ -38,7 +38,11 @@ print(f"\n\nReceived {len(test_list)} tests\n\n")
 
 # Check agaist test rules
 for test in track(test_list):
-    if test['enabled'] == 1:
+    # Check the test only if the following conditions apply:
+    # 1. The test is enabled (disabled tests do not consume units).
+    # 2. The test is not a saved event from the past.
+    # 3. The test is not a live share (which consumes units from the source account).
+    if test['enabled'] == 1 and test['savedEvent'] == 0 and test['liveShare'] == 0:
         test_details = te_get(f"tests/{test['testId']}.json")['test'][0]
         results[test_details['testName']] = []
         # Check number of agents
